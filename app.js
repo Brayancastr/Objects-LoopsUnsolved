@@ -30,7 +30,21 @@ let recipes = [
 // Your code goes here:
 
 // Each recipe should be in its own div, that can be recCont. We are declaring it here since we will want to change its value with each itteration of the loop.
-
-let recCont
-
 // HINT: Using .map will be very helpful when itterating through the ingredients array.
+
+
+let title1 = document.querySelectorAll('.title1');
+
+let time1 = document.querySelectorAll( '.time1');
+
+let calories1 = document.querySelectorAll( '.calories1' );
+
+let ingredients1 = document.querySelectorAll('.ingredients1' );
+
+
+for (let i = 0; i < recipes.length; i++) {
+    title1[i].innerHTML = recipes[i].title;
+    time1[i].innerHTML = "Time: " + recipes[i].time + " minutes";
+    calories1[i].innerHTML = "Calories: " + recipes[i].calories;
+    ingredients1[i].innerHTML = recipes[i].ingredients.join("</p><p>");
+}
